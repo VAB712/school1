@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dropbtn {
+            border-radius: 10px;
+            height: 8vh;
+            background: #ffffff7f;
+            color: rgb(0, 0, 0);
+            padding: 10px 15px;
+            font-size: 30px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f184;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 10px;
+        }
+
+        .dropdown-content a {
+            color: rgb(0, 0, 0);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background: #0000008b;
+            color: #ffffff;
+            ;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background: #ffffff7f;
+        }
+
+        .symbol {
+            width: 5vw;
+            margin-left: -5vw;
+            background: #ffffff;
+            border-radius: 10px;
+        }
+    </style>
+    <title>वजाबाकी</title>
+</head>
+
+<body>
+    <div class="home">
+        <div class="title">
+            <!-- <h1 id="title" >बेरीज</h1> -->
+            <div class="dropdown">
+                <button class="dropbtn">वजाबाकी</button>
+                <div class="dropdown-content">
+                    <a href="./index.html">बेरीज</a>
+                    <a href="./subtraction.html">वजाबाकी</a>
+                    <a href="./multiplication.html">गुणाकार</a>
+                    <a href="./division.html">भागाकार</a>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="unit">
+                <div class="units">
+                    <h1>अब्ज</h1>
+                    <h1>द.कोटी</h1>
+                    <h1>कोटी</h1>
+                    <h1>द.लक्ष</h1>
+                    <h1>लक्ष</h1>
+                    <h1>द.हजार</h1>
+                    <h1>हजार</h1>
+                    <h1>शतक</h1>
+                    <h1>दशक</h1>
+                    <h1>एकक</h1>
+                    <h1>दशमान पद्धत</h1>
+                </div>
+            </div>
+            <div class="number1">
+                <div class="digits">
+                    <div class="digit">
+                        <h2 onclick="x1000000000()" id="d19">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="x100000000()" id="d18">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="x10000000()" id="d17">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="x1000000()" id="d16">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="x100000()" id="d15">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="x10000()" id="d14">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="x1000()" id="d13">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="x100()" id="d12">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="x10()" id="d11">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="x1()" id="d10">0</h2>
+                    </div>
+                </div>
+                <div class="input_number">
+                    <input type="number" id="num1">
+                    <button onclick="split1()"> रूपांतर </button>
+                </div>
+            </div>
+            <div class="symbol">
+                <h2> ➖ </h2>
+            </div>
+            <div class="number2">
+                <div class="digits">
+                    <div class="digit">
+                        <h2 onclick="X1000000000()" id="d29">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="X100000000()" id="d28">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="X10000000()" id="d27">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="X1000000()" id="d26">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="X100000()" id="d25">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="X10000()" id="d24">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="X1000()" id="d23">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="X100()" id="d22">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="X10()" id="d21">0</h2>
+                    </div>
+                    <div class="digit">
+                        <h2 onclick="X1()" id="d20">0</h2>
+                    </div>
+                </div>
+                <div class="input_number">
+                    <input type="number" id="num2">
+                    <button onclick="split2()"> रूपांतर </button>
+                </div>
+            </div>
+            <button id="mybtn" onclick="sub()"> उत्तर मिळवा</button>
+            <div class="ans">
+                <h1>उत्तर</h1>
+                <h2 id="ans1">000000</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+<script>
+
+    var input = document.getElementById("num1");
+    input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("mybtn").click();
+        }
+    });
+
+    const sub = () => {
+        var n1 = document.getElementById("num1").value;
+        var n2 = document.getElementById("num2").value;
+        var a = parseInt(n1) - parseInt(n2);
+        document.getElementById("ans1").innerHTML = a;
+    }
+</script>
+
+</html>
